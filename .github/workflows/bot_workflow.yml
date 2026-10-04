@@ -2,7 +2,7 @@ name: Run Smart Money Bot and Send to Telegram
 
 on:
   schedule:
-    - cron: '30 13 * * *'  # Rozana dopahar 1:30 PM UTC
+    - cron: '30 13 * * *'
   workflow_dispatch:
 
 jobs:
@@ -32,4 +32,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           document: SmartMoney_Live_Dashboard.xlsx
-          caption: 'Ye lijiye aaj ka Smart Money Live Dashboard Excel file! 📊'
+          message: 'Ye lijiye aaj ka Smart Money Live Dashboard Excel file! 📊'
